@@ -1769,6 +1769,13 @@ func (v *Viper) SetConfigName(in string) {
 	}
 }
 
+// Set keyDelimeter to something other than "."
+func SetKeyDelim(in string) {
+	if in != "" {
+		v.keyDelim = in
+	}
+}
+
 // SetConfigType sets the type of the configuration returned by the
 // remote source, e.g. "json".
 func SetConfigType(in string) { v.SetConfigType(in) }
